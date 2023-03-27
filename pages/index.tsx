@@ -3,6 +3,7 @@ import { GetServerSideProps, NextPage } from 'next'
 
 import { Api } from '../utils/api'
 import { MovieType } from '@/types'
+import Link from 'next/link'
 
 const inter = Inter({ subsets: ['latin'] })
 
@@ -15,7 +16,9 @@ const Main: NextPage<MainProps> = ({ movies }) => {
   return (
     <>
       {movies.map((item) => (
-        <div>{item.title}</div>
+        <Link key={item._id} href={`/movie/${item._id}`}>
+          <div>{item.title}</div>
+        </Link>
       ))}
     </>
   )
