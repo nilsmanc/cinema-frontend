@@ -1,0 +1,28 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'i t d'
+    'i g d';
+
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr;
+
+  border: 1px solid white;
+  border-radius: 3px;
+}
+
+.image {
+  grid-area: i;
+}
+
+.title {
+  grid-area: t;
+}
+
+.genre {
+  grid-area: g;
+}
+
+.description {
+  grid-area: d;
+}
