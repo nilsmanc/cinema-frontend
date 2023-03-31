@@ -10,3 +10,11 @@ export type MovieType = {
   cast: string
   ageRating: string
 }
+
+export type CinemaType = {
+  _id: string
+  title: string
+  imageUrl: string
+  description: string
+  adress: string
+}

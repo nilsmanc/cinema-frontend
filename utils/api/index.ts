@@ -1,10 +1,12 @@
 import axios from 'axios'
 import { GetServerSidePropsContext, NextPageContext } from 'next'
+import { CinemasApi } from './cinemas'
 
 import { MoviesApi } from './movies'
 
 export type ApiReturnType = {
   movies: ReturnType<typeof MoviesApi>
+  cinemas: ReturnType<typeof CinemasApi>
 }
 
 export const Api = (ctx?: NextPageContext | GetServerSidePropsContext): ApiReturnType => {
@@ -18,6 +20,7 @@ export const Api = (ctx?: NextPageContext | GetServerSidePropsContext): ApiRetur
 
   const apis = {
     movies: MoviesApi,
+    cinemas: CinemasApi,
   }
 
   const result = Object.entries(apis).reduce((prev, [key, f]) => {
