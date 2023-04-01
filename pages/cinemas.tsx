@@ -1,3 +1,4 @@
+import CinemaItem from '@/components/CinemaItem'
 import { CinemaType } from '@/types'
 import { Api } from '@/utils/api'
 import { GetServerSideProps, NextPage } from 'next'
@@ -10,10 +11,7 @@ const Cinemas: NextPage<CinemasProps> = ({ cinemas }) => {
   return (
     <div>
       {cinemas.map((item) => (
-        <>
-          <div>{item.title}</div>
-          <img src={item.imageUrl} />
-        </>
+        <CinemaItem cinema={item} />
       ))}
     </div>
   )
