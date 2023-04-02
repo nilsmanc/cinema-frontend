@@ -1,6 +1,7 @@
 import { GetServerSidePropsContext, NextPage } from 'next'
 import { Api } from '../../utils/api'
 import { CinemaType, MovieType } from '@/types'
+import MovieItem from '@/components/MovieItem'
 
 type CinemaInfoProps = {
   cinema: CinemaType
@@ -8,13 +9,14 @@ type CinemaInfoProps = {
 }
 
 const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
-  console.log(cinema)
-  console.log(movies)
   return (
     <>
       <div>{cinema.title}</div>
       <div>{cinema.description}</div>
       <img src={cinema.imageUrl} />
+      {movies.map((item) => (
+        <MovieItem key={item._id} movie={item} />
+      ))}
     </>
   )
 }
@@ -24,9 +26,10 @@ export default CinemaInfo
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
     const id = ctx.params?.id as string
-    const cinema = await Api(ctx).cinemas.getOne(id)
-
-    const movies = await Api(ctx).movies.getCinemaMovies(id)
+    const [cinema, movies] = await Promise.all([
+      await Api(ctx).cinemas.getOne(id),
+      await Api(ctx).movies.getCinemaMovies(id),
+    ])
 
     return {
       props: {
@@ -39,10 +42,6 @@ export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
 
     return {
       props: {},
-      redirect: {
-        destination: '/',
-        permanent: false,
-      },
     }
   }
 }

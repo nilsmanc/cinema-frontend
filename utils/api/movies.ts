@@ -14,7 +14,7 @@ export const MoviesApi = (instance: AxiosInstance) => ({
   },
 
   async getCinemaMovies(id: string) {
-    const { data } = await instance.get<MovieType>(`/cinema/movies/${id}`)
+    const { data } = await instance.get<MovieType[]>(`/movies/cinema/${id}`)
     return data
   },
 })

@@ -21,6 +21,8 @@ export default MovieInfo
 export const getServerSideProps = async (ctx: GetServerSidePropsContext) => {
   try {
     const id = ctx.params?.id as string
+
+    console.log(ctx.params)
     const movie = await Api(ctx).movies.getOne(id)
 
     return {

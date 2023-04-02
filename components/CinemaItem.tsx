@@ -2,7 +2,6 @@ import { CinemaType } from '@/types'
 import Link from 'next/link'
 
 import styles from './../styles/MovieItem.module.scss'
-
 type CinemaItemProps = {
   cinema: CinemaType
 }
