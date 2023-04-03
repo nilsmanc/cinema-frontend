@@ -2,6 +2,8 @@ import { MovieType } from '@/types'
 import { GetServerSidePropsContext, NextPage } from 'next'
 import { Api } from '../../utils/api'
 
+import styles from '../../styles/MovieInfo.module.scss'
+
 type MovieInfoProps = {
   movie: MovieType
 }
@@ -9,10 +11,16 @@ type MovieInfoProps = {
 const MovieInfo: NextPage<MovieInfoProps> = ({ movie }) => {
   console.log(movie)
   return (
-    <>
-      <div>{movie.title}</div>
-      <div>{movie.description}</div>
-    </>
+    <div className={styles.wrapper}>
+      <img className={styles.image} src={movie.imageUrl} />
+      <div className={styles.title}>{movie.title}</div>
+      <div className={styles.description}>{movie.description}</div>
+      <div className={styles.ageRating}>{movie.ageRating}</div>
+      <div className={styles.cast}>{movie.cast}</div>
+      <div className={styles.director}>{movie.director}</div>
+      <div className={styles.duration}>{movie.duration}</div>
+      <div className={styles.genre}>{movie.genre}</div>
+    </div>
   )
 }
 

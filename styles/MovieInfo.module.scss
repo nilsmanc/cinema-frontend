@@ -1,0 +1,48 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'i t a u'
+    'i g d d'
+    'i r c c';
+}
+
+.image {
+  grid-area: i;
+}
+
+.title {
+  grid-area: t;
+}
+
+.description {
+  grid-area: d;
+}
+
+.ageRating {
+  grid-area: a;
+
+  font-size: 50px;
+  background-color: white;
+  width: 80px;
+  height: 80px;
+  color: black;
+  border-radius: 3px;
+  border: 1px solid gray;
+  padding-top: 7px;
+}
+
+.cast {
+  grid-area: c;
+}
+
+.director {
+  grid-area: r;
+}
+
+.duration {
+  grid-area: u;
+}
+
+.genre {
+  grid-area: g;
+}

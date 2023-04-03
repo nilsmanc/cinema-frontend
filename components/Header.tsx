@@ -11,7 +11,9 @@ const Header = () => {
       <Link href={'/cinemas'}>
         <button className={styles.cinemas}>Cinemas</button>
       </Link>
-      <button className={styles.about}>About us</button>
+      <Link href={'/about'}>
+        <button className={styles.about}>About us</button>
+      </Link>
       <input className={styles.search} placeholder='search' />
     </div>
   )
