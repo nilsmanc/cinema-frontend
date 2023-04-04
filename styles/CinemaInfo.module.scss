@@ -1,0 +1,23 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'i t'
+    'i d'
+    'm m';
+}
+
+.title {
+  grid-area: t;
+}
+
+.description {
+  grid-area: d;
+}
+
+.image {
+  grid-area: i;
+}
+
+.movies {
+  grid-area: m;
+}

@@ -1,0 +1,35 @@
+.wrapper {
+  display: grid;
+  grid-template-areas:
+    'i t d'
+    'i g d';
+
+  grid-template-columns: 1fr 2fr 5fr;
+  grid-template-rows: 1fr 1fr;
+
+  border: 1px solid white;
+  border-radius: 3px;
+
+  height: 150px;
+
+  margin: 30px;
+}
+
+.image {
+  grid-area: i;
+  height: 100%;
+}
+
+.title {
+  grid-area: t;
+  margin-top: 10px;
+}
+
+.genre {
+  grid-area: g;
+}
+
+.description {
+  grid-area: d;
+  margin-top: 10px;
+}

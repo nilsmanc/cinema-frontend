@@ -3,6 +3,8 @@ import { Api } from '../../utils/api'
 import { CinemaType, MovieType } from '@/types'
 import MovieItem from '@/components/MovieItem'
 
+import styles from '../../styles/CinemaInfo.module.scss'
+
 type CinemaInfoProps = {
   cinema: CinemaType
   movies: MovieType[]
@@ -10,14 +12,17 @@ type CinemaInfoProps = {
 
 const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
   return (
-    <>
-      <div>{cinema.title}</div>
-      <div>{cinema.description}</div>
-      <img src={cinema.imageUrl} />
-      {movies.map((item) => (
-        <MovieItem key={item._id} movie={item} />
-      ))}
-    </>
+    <div className={styles.wrapper}>
+      <div className={styles.title}>{cinema.title}</div>
+      <div className={styles.description}>{cinema.description}</div>
+      <img className={styles.image} src={cinema.imageUrl} />
+
+      <div className={styles.movies}>
+        {movies.map((item) => (
+          <MovieItem key={item._id} movie={item} />
+        ))}
+      </div>
+    </div>
   )
 }
 
