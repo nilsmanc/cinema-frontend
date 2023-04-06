@@ -1,11 +1,12 @@
 .wrapper {
   display: grid;
   grid-template-areas:
-    'i t d'
-    'i g d';
+    'i t'
+    'i d';
 
-  grid-template-columns: 1fr 2fr 5fr;
+  grid-template-columns: 1fr 5fr;
   grid-template-rows: 1fr 1fr;
+  align-items: baseline;
 
   border: 1px solid white;
   border-radius: 3px;
@@ -13,6 +14,11 @@
   height: 150px;
 
   margin: 30px;
+
+  background: rgb(94, 11, 11);
+  background: linear-gradient(90deg, rgba(94, 11, 11, 1) 0%, rgba(48, 13, 13, 1) 100%);
+
+  color: black;
 }
 
 .image {
@@ -23,6 +29,7 @@
 .title {
   grid-area: t;
   margin-top: 10px;
+  font-size: 30px;
 }
 
 .genre {
@@ -32,4 +39,5 @@
 .description {
   grid-area: d;
   margin-top: 10px;
+  font-size: 20px;
 }

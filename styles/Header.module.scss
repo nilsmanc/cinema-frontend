@@ -3,6 +3,10 @@
   justify-content: space-between;
   grid-template-areas: 'i t c a s';
   grid-template-columns: 1fr 3fr 3fr 3fr 3fr;
+  background-color: rgb(94, 11, 11);
+  padding: 10px 50px;
+  align-items: center;
+  border-bottom: 2px solid black;
 }
 
 .image {
@@ -12,16 +16,44 @@
 
 .table {
   grid-area: t;
+  color: black;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .cinemas {
   grid-area: c;
+  color: black;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .about {
   grid-area: a;
+  color: black;
+  background: none;
+  border: none;
+  font-size: 30px;
+  cursor: pointer;
+  &:hover {
+    font-weight: 600;
+  }
 }
 
 .search {
   grid-area: s;
+  background: none;
+  border: 1px solid black;
+  padding: 5px;
+  border-radius: 3px;
 }
