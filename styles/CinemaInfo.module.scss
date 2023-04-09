@@ -4,18 +4,32 @@
     'i t'
     'i d'
     'm m';
+
+  background: rgb(0, 0, 0);
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(94, 11, 11, 1) 100%);
+
+  color: black;
+
+  align-items: center;
+
+  padding: 50px;
+
+  grid-template-columns: 1fr 1fr;
 }
 
 .title {
   grid-area: t;
+  font-size: 70px;
 }
 
 .description {
   grid-area: d;
+  font-size: 30px;
 }
 
 .image {
   grid-area: i;
+  border: 1px solid white;
 }
 
 .movies {
