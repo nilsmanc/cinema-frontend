@@ -13,7 +13,6 @@ type MainProps = {
 }
 
 const Main: NextPage<MainProps> = ({ movies }) => {
-  console.log(movies)
   return (
     <>
       {movies.map((item) => (

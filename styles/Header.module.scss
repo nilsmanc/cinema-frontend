@@ -16,38 +16,29 @@
 
 .table {
   grid-area: t;
-  color: black;
+  color: rgb(197, 197, 197);
   background: none;
   border: none;
   font-size: 30px;
   cursor: pointer;
-  &:hover {
-    font-weight: 600;
-  }
 }
 
 .cinemas {
   grid-area: c;
-  color: black;
+  color: rgb(197, 197, 197);
   background: none;
   border: none;
   font-size: 30px;
   cursor: pointer;
-  &:hover {
-    font-weight: 600;
-  }
 }
 
 .about {
   grid-area: a;
-  color: black;
+  color: rgb(197, 197, 197);
   background: none;
   border: none;
   font-size: 30px;
   cursor: pointer;
-  &:hover {
-    font-weight: 600;
-  }
 }
 
 .search {

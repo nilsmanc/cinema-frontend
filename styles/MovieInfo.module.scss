@@ -3,16 +3,17 @@
   grid-template-areas:
     'i t g a'
     'i u d d'
-    'i r c c';
+    'r r c c';
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(94, 11, 11, 1) 100%);
 
   //background: rgb(0,0,0);
   //background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(94,11,11,1) 50%, rgba(0,0,0,1) 100%);
 
-  color: black;
+  color: rgb(197, 197, 197);
 
   grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
   align-items: center;
 }
 
@@ -45,10 +46,12 @@
 
 .cast {
   grid-area: c;
+  align-self: baseline;
 }
 
 .director {
   grid-area: r;
+  align-self: baseline;
 }
 
 .duration {

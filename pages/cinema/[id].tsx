@@ -15,7 +15,6 @@ const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
     <div className={styles.wrapper}>
       <div className={styles.title}>{cinema.title}</div>
       <div className={styles.description}>{cinema.description}</div>
-      <div className={styles.adress}>{cinema.adress}</div>
       <img className={styles.image} src={cinema.imageUrl} />
 
       <div className={styles.movies}>

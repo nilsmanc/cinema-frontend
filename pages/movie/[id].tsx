@@ -9,7 +9,6 @@ type MovieInfoProps = {
 }
 
 const MovieInfo: NextPage<MovieInfoProps> = ({ movie }) => {
-  console.log(movie)
   return (
     <div className={styles.wrapper}>
       <img className={styles.image} src={movie.imageUrl} />
