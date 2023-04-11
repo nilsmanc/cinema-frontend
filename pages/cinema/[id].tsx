@@ -18,9 +18,43 @@ const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
       <img className={styles.image} src={cinema.imageUrl} />
 
       <div className={styles.movies}>
-        {movies.map((item) => (
-          <MovieItem key={item._id} movie={item} />
-        ))}
+        <div className={styles.time}>10.00</div>
+        {movies
+          .filter((item) => item.cinema === '64265d3456289865eeb9d844')
+          .filter((item) => item.time.includes('10.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
+        <div className={styles.time}>12.00</div>
+        {movies
+          .filter((item) => item.time.includes('12.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
+        <div className={styles.time}>14.00</div>
+        {movies
+          .filter((item) => item.time.includes('14.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
+        <div className={styles.time}>16.00</div>
+        {movies
+          .filter((item) => item.time.includes('16.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
+        <div className={styles.time}>18.00</div>
+        {movies
+          .filter((item) => item.time.includes('18.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
+        <div className={styles.time}>20.00</div>
+        {movies
+          .filter((item) => item.time.includes('20.00'))
+          .map((item) => (
+            <MovieItem key={item._id} movie={item} />
+          ))}
       </div>
     </div>
   )
