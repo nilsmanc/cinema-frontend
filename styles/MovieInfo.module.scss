@@ -1,20 +1,19 @@
 .wrapper {
   display: grid;
   grid-template-areas:
-    'i t g a'
-    'i u d d'
-    'r r c c';
+    'i t t a'
+    'i c c c'
+    'i d d d';
   background: rgb(0, 0, 0);
   background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(94, 11, 11, 1) 100%);
 
-  //background: rgb(0,0,0);
-  //background: linear-gradient(0deg, rgba(0,0,0,1) 0%, rgba(94,11,11,1) 50%, rgba(0,0,0,1) 100%);
-
   color: rgb(197, 197, 197);
 
-  grid-template-columns: 1fr 1fr 1fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-columns: 3fr 2fr 2fr 2fr;
+
   align-items: center;
+
+  padding: 50px 100px;
 }
 
 .image {
@@ -25,15 +24,16 @@
 
 .title {
   grid-area: t;
+  font-size: 50px;
 }
 
 .description {
   grid-area: d;
+  font-size: 20px;
 }
 
 .ageRating {
   grid-area: a;
-
   font-size: 50px;
   background-color: white;
   width: 80px;
@@ -44,20 +44,23 @@
   padding-top: 7px;
 }
 
+.director {
+  display: inline-block;
+  margin-bottom: 10px;
+}
+
 .cast {
+  font-size: 20px;
   grid-area: c;
   align-self: baseline;
 }
 
-.director {
-  grid-area: r;
-  align-self: baseline;
-}
-
 .duration {
-  grid-area: u;
+  font-size: 18px;
+  font-weight: bold;
 }
 
 .genre {
-  grid-area: g;
+  font-size: 18px;
+  margin-right: 10px;
 }

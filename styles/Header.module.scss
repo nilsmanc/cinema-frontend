@@ -3,7 +3,15 @@
   justify-content: space-between;
   grid-template-areas: 'i t c a s';
   grid-template-columns: 1fr 3fr 3fr 3fr 3fr;
-  background-color: rgb(94, 11, 11);
+  background: rgb(41, 5, 5);
+  background: linear-gradient(
+    90deg,
+    rgba(41, 5, 5, 1) 0%,
+    rgba(91, 11, 11, 1) 25%,
+    rgba(41, 5, 5, 1) 50%,
+    rgba(91, 11, 11, 1) 75%,
+    rgba(41, 5, 5, 1) 100%
+  );
   padding: 10px 50px;
   align-items: center;
   border-bottom: 2px solid black;

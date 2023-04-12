@@ -12,13 +12,19 @@ const MovieInfo: NextPage<MovieInfoProps> = ({ movie }) => {
   return (
     <div className={styles.wrapper}>
       <img className={styles.image} src={movie.imageUrl} />
-      <div className={styles.title}>{movie.title}</div>
+      <div className={styles.title}>
+        <div>{movie.title}</div>
+        <span className={styles.genre}>{movie.genre}</span>
+        <span className={styles.duration}>{movie.duration}</span>
+      </div>
       <div className={styles.description}>{movie.description}</div>
       <div className={styles.ageRating}>{movie.ageRating}</div>
-      <div className={styles.cast}>{movie.cast}</div>
-      <div className={styles.director}>{movie.director}</div>
-      <div className={styles.duration}>{movie.duration}</div>
-      <div className={styles.genre}>{movie.genre}</div>
+
+      <div className={styles.cast}>
+        Director: <span className={styles.director}>{movie.director}</span>
+        <br />
+        Cast: <span className={styles.cast}>{movie.cast}</span>
+      </div>
     </div>
   )
 }
