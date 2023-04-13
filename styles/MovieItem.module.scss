@@ -5,7 +5,7 @@
     'i g'
     'i d';
 
-  grid-template-columns: 250px 10fr;
+  grid-template-columns: 270px 10fr;
   grid-template-rows: 1fr 1fr 4fr;
   align-items: center;
 
@@ -14,7 +14,7 @@
 
   margin: 30px;
   height: 325px;
-  padding-right: 400px;
+  padding-right: 300px;
 
   background: rgb(94, 11, 11);
   background: linear-gradient(90deg, rgba(94, 11, 11, 1) 0%, rgba(48, 13, 13, 1) 100%);
@@ -25,11 +25,12 @@
 .image {
   grid-area: i;
   height: 100%;
+  width: 230px;
 }
 
 .title {
   grid-area: t;
-  margin-top: 10px;
+  margin-top: 40px;
   font-size: 30px;
 }
 

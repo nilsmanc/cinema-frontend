@@ -2,11 +2,11 @@
   display: grid;
   justify-content: space-between;
   grid-template-areas: 'i t c a s';
-  grid-template-columns: 1fr 3fr 3fr 3fr 3fr;
-  background: rgb(41, 5, 5);
+
+  background: rgb(91, 11, 11);
   background: linear-gradient(
     90deg,
-    rgba(41, 5, 5, 1) 0%,
+    rgba(91, 11, 11, 1) 0%,
     rgba(91, 11, 11, 1) 25%,
     rgba(41, 5, 5, 1) 50%,
     rgba(91, 11, 11, 1) 75%,
@@ -18,8 +18,8 @@
 }
 
 .image {
-  width: 50px;
-  height: 50px;
+  width: 60px;
+  height: 60px;
 }
 
 .table {
