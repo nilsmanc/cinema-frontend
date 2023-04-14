@@ -3,19 +3,45 @@ import { GetServerSideProps, NextPage } from 'next'
 
 import { Api } from '../utils/api'
 import { MovieType } from '@/types'
-import Link from 'next/link'
 import MovieItem from '@/components/MovieItem'
-
-const inter = Inter({ subsets: ['latin'] })
+import { useEffect, useState } from 'react'
 
 type MainProps = {
   movies: MovieType[]
 }
 
 const Main: NextPage<MainProps> = ({ movies }) => {
+  const [filteredMovies, setFilteredMovies] = useState(movies)
+
+  const [search, setSearch] = useState('')
+
+  const [genre, setGenre] = useState('')
+
+  const handleSearch = (search?: string, genre?: string) => {
+    let data = [...movies]
+    if (genre) {
+      data = data.filter((movie) => movie.genre.includes(genre))
+    }
+
+    if (search) {
+      data = data.filter((movie) => movie.title.toLowerCase().includes(search.toLowerCase()))
+    }
+
+    setFilteredMovies(data)
+  }
+
+  useEffect(() => {
+    //@ts-ignore
+    const genreValue = genre?.value || ''
+
+    handleSearch(search, genreValue)
+  })
+
   return (
     <>
-      {movies.map((item) => (
+      <div>Genre</div>
+      <input value={genre} onChange={(e) => setGenre(e.target.value)} />
+      {filteredMovies.map((item) => (
         <MovieItem key={item._id} movie={item} />
       ))}
     </>

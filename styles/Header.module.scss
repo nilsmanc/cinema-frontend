@@ -2,6 +2,7 @@
   display: grid;
   justify-content: space-between;
   grid-template-areas: 'i t c a s';
+  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
 
   background: rgb(91, 11, 11);
   background: linear-gradient(
