@@ -1,10 +1,11 @@
-import { Inter } from 'next/font/google'
 import { GetServerSideProps, NextPage } from 'next'
 
 import { Api } from '../utils/api'
 import { MovieType } from '@/types'
 import MovieItem from '@/components/MovieItem'
 import { useEffect, useState } from 'react'
+
+import styles from '../styles/App.module.scss'
 
 type MainProps = {
   movies: MovieType[]
@@ -31,16 +32,25 @@ const Main: NextPage<MainProps> = ({ movies }) => {
   }
 
   useEffect(() => {
-    //@ts-ignore
-    const genreValue = genre?.value || ''
-
-    handleSearch(search, genreValue)
-  })
+    handleSearch(search, genre)
+  }, [search, genre])
 
   return (
     <>
-      <div>Genre</div>
-      <input value={genre} onChange={(e) => setGenre(e.target.value)} />
+      <div className={styles.genre}>
+        Genre
+        <select value={genre} onChange={(e) => setGenre(e.target.value)}>
+          <option value='' selected>
+            All
+          </option>
+          <option value='Action'>Action</option>
+          <option value='Drama'>Drama</option>
+        </select>
+      </div>
+      <div className={styles.search}>
+        Search
+        <input value={search} onChange={(e) => setSearch(e.target.value)} />
+      </div>
       {filteredMovies.map((item) => (
         <MovieItem key={item._id} movie={item} />
       ))}

@@ -1,0 +1,36 @@
+.genre {
+  font-size: 30px;
+  margin: 15px 0 5px 30px;
+  select {
+    height: 40px;
+    width: 140px;
+    font-size: 20px;
+    margin-left: 30px;
+
+    background-color: rgb(91, 11, 11);
+    border: none;
+    padding: 0 1em 0 0;
+
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
+}
+
+.search {
+  font-size: 30px;
+  margin-left: 30px;
+  input {
+    height: 30px;
+    width: 300px;
+    margin-left: 20px;
+
+    background-color: rgb(91, 11, 11);
+
+    padding: 0 1em 0 0;
+
+    font-family: inherit;
+    font-size: inherit;
+    cursor: pointer;
+  }
+}

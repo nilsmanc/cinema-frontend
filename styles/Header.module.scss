@@ -1,8 +1,8 @@
 .wrapper {
   display: grid;
   justify-content: space-between;
-  grid-template-areas: 'i t c a s';
-  grid-template-columns: 1fr 1fr 1fr 1fr 2fr;
+  grid-template-areas: 'i t c a';
+  grid-template-columns: 2fr 3fr 3fr 3fr;
 
   background: rgb(91, 11, 11);
   background: linear-gradient(
@@ -13,7 +13,7 @@
     rgba(91, 11, 11, 1) 75%,
     rgba(41, 5, 5, 1) 100%
   );
-  padding: 10px 50px;
+  padding: 10px 150px;
   align-items: center;
   border-bottom: 2px solid black;
 }

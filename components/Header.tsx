@@ -16,7 +16,6 @@ const Header = () => {
       <Link href={'/about'}>
         <button className={styles.about}>About us</button>
       </Link>
-      <input className={styles.search} placeholder='search' />
     </div>
   )
 }
