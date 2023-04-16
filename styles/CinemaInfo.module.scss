@@ -3,6 +3,7 @@
   grid-template-areas:
     'i t'
     'i d'
+    'b b'
     'm m';
 
   background: rgb(0, 0, 0);
@@ -44,4 +45,14 @@
 .time {
   font-size: 40px;
   margin: 30px;
+}
+
+.date {
+  grid-area: b;
+  width: 30px;
+  margin: 30px 10px 0 0;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+  font-size: 40px;
 }

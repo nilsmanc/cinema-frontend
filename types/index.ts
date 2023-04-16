@@ -10,6 +10,8 @@ export type MovieType = {
   cast: string
   ageRating: string
   cinema: string
+  day: string
+  price: string
 }
 
 export type CinemaType = {
