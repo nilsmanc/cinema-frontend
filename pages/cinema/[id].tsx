@@ -35,49 +35,49 @@ const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('10.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={3} />
           ))}
         <div className={styles.time}>12.00</div>
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('12.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={3} />
           ))}
         <div className={styles.time}>14.00</div>
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('14.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={4} />
           ))}
         <div className={styles.time}>16.00</div>
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('16.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={4} />
           ))}
         <div className={styles.time}>18.00</div>
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('18.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={5} />
           ))}
         <div className={styles.time}>20.00</div>
         {movies
           .filter((item) => item.cinema === '64265d3456289865eeb9d844')
           .filter((item) => item.time.includes('20.00'))
-          .filter((item) => item.day === day)
+          .filter((item) => item.day.includes(day))
           .map((item) => (
-            <MovieItem key={item._id} movie={item} />
+            <MovieItem key={item._id} movie={item} price={4} />
           ))}
       </div>
     </div>

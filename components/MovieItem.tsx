@@ -5,9 +5,12 @@ import styles from './../styles/MovieItem.module.scss'
 
 type MovieItemProps = {
   movie: MovieType
+  price: number
 }
 
-const MovieItem: React.FC<MovieItemProps> = ({ movie }) => {
+const MovieItem: React.FC<MovieItemProps> = ({ movie, price }) => {
+  const finalPrice = (price * movie.priceRatio).toFixed(2)
+
   return (
     <Link href={`/movie/${movie._id}`}>
       <div className={styles.wrapper}>
@@ -15,6 +18,7 @@ const MovieItem: React.FC<MovieItemProps> = ({ movie }) => {
         <div className={styles.title}>{movie.title}</div>
         <div className={styles.genre}>{movie.genre}</div>
         <div className={styles.description}>{movie.description}</div>
+        <div className={styles.price}>{finalPrice}</div>
       </div>
     </Link>
   )
