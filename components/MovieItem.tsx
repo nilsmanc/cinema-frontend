@@ -18,7 +18,7 @@ const MovieItem: React.FC<MovieItemProps> = ({ movie, price }) => {
         <div className={styles.title}>{movie.title}</div>
         <div className={styles.genre}>{movie.genre}</div>
         <div className={styles.description}>{movie.description}</div>
-        <div className={styles.price}>{finalPrice}</div>
+        {price && <div className={styles.price}>{finalPrice}$</div>}
       </div>
     </Link>
   )
