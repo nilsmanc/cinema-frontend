@@ -55,4 +55,7 @@
   border: none;
   cursor: pointer;
   font-size: 40px;
+  &:hover {
+    text-shadow: 2px 2px 2px black;
+  }
 }

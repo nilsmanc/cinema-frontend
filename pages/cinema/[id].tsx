@@ -14,8 +14,6 @@ type CinemaInfoProps = {
 const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
   const [day, setDay] = useState('')
 
-  console.log(day)
-
   const days = ['3', '4', '5', '6', '7', '8']
 
   return (
