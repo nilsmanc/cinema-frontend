@@ -20,18 +20,46 @@
   background: linear-gradient(90deg, rgba(94, 11, 11, 1) 0%, rgba(48, 13, 13, 1) 100%);
 
   color: rgb(197, 197, 197);
+
+  @media (max-width: 1024px) {
+    grid-template-columns: 4fr 4fr;
+    height: 300px;
+  }
+  @media (max-width: 768px) {
+    grid-template-columns: 170px 4fr;
+    height: 220px;
+  }
+  @media (max-width: 375px) {
+  }
 }
 
 .image {
   grid-area: i;
   height: 100%;
   width: 230px;
+  @media (max-width: 1024px) {
+    width: 205px;
+  }
+  @media (max-width: 768px) {
+    width: 150px;
+  }
 }
 
 .title {
   grid-area: t;
   margin-top: 40px;
   font-size: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 }
 
 .genre {
@@ -45,6 +73,9 @@
   align-self: baseline;
   overflow: hidden;
   font-size: 18px;
+  @media (max-width: 1280px) {
+    display: none;
+  }
 }
 
 .price {
