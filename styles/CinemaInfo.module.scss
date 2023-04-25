@@ -21,11 +21,34 @@
   padding: 50px;
 
   grid-template-columns: 1fr 1fr;
+
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+  @media (max-width: 768px) {
+    grid-template-areas:
+      'i i'
+      't d'
+      'b b'
+      'm m';
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 }
 
 .title {
   grid-area: t;
   font-size: 70px;
+  @media (max-width: 1024px) {
+    font-size: 50px;
+  }
+  @media (max-width: 768px) {
+    font-size: 30px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 }
 
 .description {
@@ -36,6 +59,16 @@
 .image {
   grid-area: i;
   border: 1px solid white;
+
+  @media (max-width: 1024px) {
+    width: 350px;
+  }
+  @media (max-width: 768px) {
+    margin: 0 auto;
+  }
+  @media (max-width: 375px) {
+    width: 300px;
+  }
 }
 
 .movies {
