@@ -22,14 +22,18 @@
   color: rgb(197, 197, 197);
 
   @media (max-width: 1024px) {
-    grid-template-columns: 4fr 4fr;
+    grid-template-columns: 225px 4fr;
     height: 300px;
   }
   @media (max-width: 768px) {
     grid-template-columns: 170px 4fr;
     height: 220px;
-  }
-  @media (max-width: 375px) {
+
+    grid-template-areas:
+      'i t'
+      'i g'
+      'i d'
+      'i p';
   }
 }
 
@@ -55,16 +59,26 @@
     margin-top: 20px;
   }
   @media (max-width: 768px) {
-    font-size: 24px;
+    font-size: 18px;
   }
   @media (max-width: 375px) {
-    font-size: 20px;
+    font-size: 14px;
   }
 }
 
 .genre {
   grid-area: g;
   font-size: 18px;
+
+  @media (max-width: 1024px) {
+    font-size: 16px;
+  }
+  @media (max-width: 768px) {
+    font-size: 14px;
+  }
+  @media (max-width: 375px) {
+    font-size: 12px;
+  }
 }
 
 .description {
@@ -81,4 +95,15 @@
 .price {
   grid-area: p;
   font-size: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 26px;
+  }
+  @media (max-width: 768px) {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 }

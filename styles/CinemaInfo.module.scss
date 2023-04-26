@@ -40,8 +40,11 @@
 .title {
   grid-area: t;
   font-size: 70px;
+  margin-left: 20px;
+
   @media (max-width: 1024px) {
     font-size: 50px;
+    margin-top: 20px;
   }
   @media (max-width: 768px) {
     font-size: 30px;
@@ -54,6 +57,18 @@
 .description {
   grid-area: d;
   font-size: 30px;
+  margin-left: 20px;
+
+  @media (max-width: 1024px) {
+    font-size: 26px;
+    margin-top: 20px;
+  }
+  @media (max-width: 768px) {
+    font-size: 22px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+  }
 }
 
 .image {
@@ -78,8 +93,23 @@
 .time {
   font-size: 40px;
   margin: 30px;
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+  }
+  @media (max-width: 375px) {
+    font-size: 22px;
+  }
 }
 
+.dates {
+  @media (max-width: 1024px) {
+    margin: 40px 0 0 20px;
+  }
+}
 .date {
   grid-area: b;
   width: 30px;
@@ -90,5 +120,19 @@
   font-size: 40px;
   &:hover {
     text-shadow: 2px 2px 2px black;
+  }
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+    width: 26px;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+    width: 22px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+    width: 18px;
   }
 }
