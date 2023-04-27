@@ -22,9 +22,12 @@ const CinemaInfo: NextPage<CinemaInfoProps> = ({ cinema, movies }) => {
       <div className={styles.description}>{cinema.description}</div>
       <img className={styles.image} src={cinema.imageUrl} />
       <div className={styles.dates}>
-        {days.map((day) => (
-          <button key={day} onClick={() => setDay(day)} className={styles.date}>
-            {day}
+        {days.map((dayItem) => (
+          <button
+            key={dayItem}
+            onClick={() => setDay(dayItem)}
+            className={day === dayItem ? styles.activeDate : styles.date}>
+            {dayItem}
           </button>
         ))}
       </div>

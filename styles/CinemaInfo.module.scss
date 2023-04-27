@@ -136,3 +136,28 @@
     width: 18px;
   }
 }
+
+.activeDate {
+  grid-area: b;
+  width: 30px;
+  margin: 30px 10px 0 0;
+  background-color: transparent;
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+  font-size: 60px;
+
+  @media (max-width: 1024px) {
+    font-size: 30px;
+    width: 26px;
+    margin: 0;
+  }
+  @media (max-width: 768px) {
+    font-size: 26px;
+    width: 22px;
+  }
+  @media (max-width: 375px) {
+    font-size: 20px;
+    width: 18px;
+  }
+}
