@@ -39,10 +39,8 @@ const Main: NextPage<MainProps> = ({ movies }) => {
     <>
       <div className={styles.genre}>
         Genre
-        <select value={genre} onChange={(e) => setGenre(e.target.value)}>
-          <option value='' selected>
-            All
-          </option>
+        <select defaultValue='' value={genre} onChange={(e) => setGenre(e.target.value)}>
+          <option value=''>All</option>
           <option value='Action'>Action</option>
           <option value='Drama'>Drama</option>
         </select>
