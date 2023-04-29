@@ -5,7 +5,7 @@ import styles from './../styles/MovieItem.module.scss'
 
 type MovieItemProps = {
   movie: MovieType
-  price: number
+  price?: number
 }
 
 const MovieItem: React.FC<MovieItemProps> = ({ movie, price }) => {

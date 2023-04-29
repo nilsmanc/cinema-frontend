@@ -32,8 +32,9 @@
 .image {
   grid-area: i;
   border: 1px solid white;
+  width: 400px;
   @media (max-width: 1024px) {
-    width: 400px;
+    width: 350px;
   }
   @media (max-width: 768px) {
     width: 300px;
