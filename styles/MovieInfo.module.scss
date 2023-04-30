@@ -1,5 +1,6 @@
 .wrapper {
   display: grid;
+
   grid-template-areas:
     'i t t a'
     'i c c c'
@@ -13,7 +14,7 @@
 
   align-items: center;
 
-  padding: 50px 100px;
+  padding: 50px;
   grid-gap: 40px;
 
   @media (max-width: 768px) {
@@ -23,6 +24,7 @@
       'c c'
       'd d';
     grid-gap: 10px;
+    grid-template-columns: 1fr 1fr;
   }
   @media (max-width: 375px) {
     font-size: 20px;
@@ -37,6 +39,7 @@
     width: 350px;
   }
   @media (max-width: 768px) {
+    margin: 0 auto;
     width: 300px;
   }
   @media (max-width: 375px) {

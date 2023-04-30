@@ -26,7 +26,7 @@
     height: 300px;
   }
   @media (max-width: 768px) {
-    grid-template-columns: 170px 4fr;
+    grid-template-columns: 160px 4fr;
     height: 220px;
 
     grid-template-areas:
@@ -59,7 +59,7 @@
     margin-top: 20px;
   }
   @media (max-width: 768px) {
-    font-size: 20px;
+    font-size: 16px;
     margin-bottom: 20px;
   }
 }
