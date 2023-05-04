@@ -2,13 +2,11 @@ import Header from './Header'
 import { ReactNode } from 'react'
 import Footer from './Footer'
 
-import styles from '../styles/Layout.module.scss'
-
 type LayoutProps = {
   children?: ReactNode
 }
 
-const Layout = ({ children }: LayoutProps) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div>
       <Header />
