@@ -11,7 +11,7 @@ const Cinemas: NextPage<CinemasProps> = ({ cinemas }) => {
   return (
     <div>
       {cinemas.map((item) => (
-        <CinemaItem cinema={item} />
+        <CinemaItem key={item._id} cinema={item} />
       ))}
     </div>
   )
