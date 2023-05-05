@@ -11,7 +11,7 @@ export type ApiReturnType = {
 
 export const Api = (ctx?: NextPageContext | GetServerSidePropsContext): ApiReturnType => {
   const instance = axios.create({
-    baseURL: 'http://localhost:4444',
+    baseURL: process.env.REACT_APP_API_URL,
     headers: {
       Accept: 'application/json',
       'Accept-Encoding': 'identity',
